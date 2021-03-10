@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
+using UnityEngine.EventSystems;
 
 public class Buttons : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class Buttons : MonoBehaviour
 
     public void Option()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         gameManager.LoseCoins(coinCost, rudeness, information);
     }
 

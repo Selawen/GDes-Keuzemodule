@@ -6,11 +6,13 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    int coins = 10;
+    int coins = 30;
     int anger = 0;
     int satisfaction = 0;
 
     public int response = 0;
+
+    private int ticks = 0;
 
     [SerializeField] private TextMeshProUGUI coinText;
     public TextMeshProUGUI dialogueText;
@@ -31,7 +33,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Reset();
+        Time.timeScale = 0;
     }
 
     private enum Emotion
@@ -42,6 +44,16 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (ticks < 50)
+        {
+            ticks++;
+        } else
+        {
+            ticks = 0;
+            coins--;
+            coinText.text = coins.ToString();
+        }
+
         if (coins <= 0)
         {
             SetEmotion(Emotion.Miffed);
@@ -89,7 +101,7 @@ public class GameManager : MonoBehaviour
 
     public void Reset()
     {
-        coins = 10;
+        coins = 30;
         response = 0;
         anger = 0;
         satisfaction = 0;
