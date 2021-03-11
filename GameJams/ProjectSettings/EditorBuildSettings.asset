@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Long_Distance_call.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Negotiation.unity
     guid: 637d0b3bc6ad2b94e8680222c639ee19
+  - enabled: 1
+    path: Assets/Scenes/Tiny_and_Big.unity
+    guid: 9bc395c64a8d5ef45b1127de849c70f3
   m_configObjects: {}

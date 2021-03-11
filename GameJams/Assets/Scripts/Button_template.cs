@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Button_template : MonoBehaviour, IButtons
 {
-    GameManager_template gameManager;
+    public IGameManager gameManager;
 
     public IGameManager GameManager()
     {
